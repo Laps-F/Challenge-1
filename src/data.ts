@@ -44,10 +44,10 @@ class ListOfComments {
     }
 }
 
-const first_post = new Post(1,"Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "https://picsum.photos/200/300", "Etiam massa massa, laoreet ac neque vel, condimentum eleifend nunc. In luctus, metus nec consequat malesuada, odio nisi dapibus enim, rutrum aliquet ante quam vitae tortor.");
-const second_post = new Post(2,"Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "https://picsum.photos/200/300", "Etiam massa massa, laoreet ac neque vel, condimentum eleifend nunc. In luctus, metus nec consequat malesuada, odio nisi dapibus enim, rutrum aliquet ante quam vitae tortor.");
-const third_post = new Post(3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "https://picsum.photos/200/300", "Etiam massa massa, laoreet ac neque vel, condimentum eleifend nunc. In luctus, metus nec consequat malesuada, odio nisi dapibus enim, rutrum aliquet ante quam vitae tortor.");
-const fourth_post = new Post(4,"Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "https://picsum.photos/200/300", "Etiam massa massa, laoreet ac neque vel, condimentum eleifend nunc. In luctus, metus nec consequat malesuada, odio nisi dapibus enim, rutrum aliquet ante quam vitae tortor.");
+const first_post = new Post(1,"Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "https://source.unsplash.com/random/200x200?sig=1", "Etiam massa massa, laoreet ac neque vel, condimentum eleifend nunc. In luctus, metus nec consequat malesuada, odio nisi dapibus enim, rutrum aliquet ante quam vitae tortor.");
+const second_post = new Post(2,"Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "https://source.unsplash.com/random/200x200?sig=2", "Etiam massa massa, laoreet ac neque vel, condimentum eleifend nunc. In luctus, metus nec consequat malesuada, odio nisi dapibus enim, rutrum aliquet ante quam vitae tortor.");
+const third_post = new Post(3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "https://source.unsplash.com/random/200x200?sig=3", "Etiam massa massa, laoreet ac neque vel, condimentum eleifend nunc. In luctus, metus nec consequat malesuada, odio nisi dapibus enim, rutrum aliquet ante quam vitae tortor.");
+const fourth_post = new Post(4,"Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "https://source.unsplash.com/random/200x200?sig=4", "Etiam massa massa, laoreet ac neque vel, condimentum eleifend nunc. In luctus, metus nec consequat malesuada, odio nisi dapibus enim, rutrum aliquet ante quam vitae tortor.");
 
 const first_comment = new ListOfComments(10, first_post.Id, "bibendum@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris.");
 const second_comment = new ListOfComments(20, first_post.Id, "maximus@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris.");
@@ -61,8 +61,8 @@ document.getElementById("fourth-title")!.innerHTML = fourth_post.Title;
 
 (document.getElementById("first-img")! as HTMLImageElement).src = first_post.ImageURL;
 (document.getElementById("second-img")! as HTMLImageElement).src = second_post.ImageURL;
-(document.getElementById("third-img")! as HTMLImageElement).src = second_post.ImageURL;
-(document.getElementById("fourth-img")! as HTMLImageElement).src = second_post.ImageURL;
+(document.getElementById("third-img")! as HTMLImageElement).src = third_post.ImageURL;
+(document.getElementById("fourth-img")! as HTMLImageElement).src = fourth_post.ImageURL;
 
 document.getElementById("first-body")!.innerHTML = first_post.Body;
 document.getElementById("second-body")!.innerHTML = second_post.Body;
