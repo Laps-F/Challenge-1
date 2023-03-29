@@ -4,40 +4,57 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>First Challenge</title>
+        <link rel="stylesheet" href="style.css">
         <script src="dist/data.js" defer></script>
+        <script src="dist/slideshow.js" defer></script>
+
     </head>
 
     <body>
-        <h1> List of Posts</h1>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
 
-        <session>
-            <h2> First Post</h2>
-            <a href="first_post.html"><img id="first-img" width="1000" height="600"></a>
-            <h3 id="first-title"></h3>
-            <p id="first-body"></p>
-        </session>
-
-        <session>
-            <h2> Second Post</h2>
-            <a href="second_post.html"><img id="second-img" width="1000" height="600"></a>
-            <h3 id="second-title"></h3>
-            <p id="second-body"></p>
-        </session>
-
-        <session>
-            <h2> Third Post</h2>
-            <a href="third_post.html"><img id="third-img" width="1000" height="600"></a>
-            <h3 id="third-title"></h3>
-            <p id="third-body"></p>
-        </session>
-
-        <session>
-            <h2> Fourth Post</h2>
-            <a href="fourth_post.html"><img id="fourth-img" width="1000" height="600"></a>
-            <h3 id="fourth-title"></h3>
-            <p id="fourth-body"></p>
-        </session>
-
+            <!-- Full-width images with number and caption text -->
+            <session class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <a href="first_post.html"><img id="first-img" width="1000" height="550" style="border:1px solid"></a>
+                <h3 id="first-title" class="text"></h3>
+                <div id="first-body" class="text"></div>
+            </session>
         
+            <session class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <a href="second_post.html"><img id="second-img" width="1000" height="550" style="border:1px solid"></a>
+                <h3 id="second-title" class="text"></h3>
+                <div id="second-body" class="text"></div>
+            </session>
+        
+            <session class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <a href="third_post.html"><img id="third-img" width="1000" height="550" style="border:1px solid"></a>
+                <h3 id="third-title" class="text"></h3>
+                <div id="third-body" class="text"></div>
+            </session>
+
+            <session class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <a href="fourth_post.html"><img id="fourth-img" width="1000" height="550" style="border:1px solid"></a>
+                <h3 id="fourth-title" class="text"></h3>
+                <div id="fourth-body" class="text"></div>
+            </session>
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
     </body>
 </html>
