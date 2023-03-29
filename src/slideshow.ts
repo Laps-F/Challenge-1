@@ -26,4 +26,13 @@ function showSlides(n: any) {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
+
+    window.addEventListener('load', () => {
+      window.onkeydown = function (event) {
+          if(event.key === 'ArrowRight')
+              plusSlides(1);
+          else if(event.key === 'ArrowLeft')
+              plusSlides(-1);
+      };
+    });
 }
