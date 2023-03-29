@@ -21,7 +21,7 @@ class Post {
     }
 }
 
-class ListOfComments {
+class Commentt {
 
     constructor(private id: number, private postId: number, private email: string, private body: string){
 
@@ -44,30 +44,144 @@ class ListOfComments {
     }
 }
 
-const first_post = new Post(1,"Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "https://source.unsplash.com/random/200x200?sig=1", "Etiam massa massa, laoreet ac neque vel, condimentum eleifend nunc. In luctus, metus nec consequat malesuada, odio nisi dapibus enim, rutrum aliquet ante quam vitae tortor.");
-const second_post = new Post(2,"Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "https://source.unsplash.com/random/200x200?sig=2", "Etiam massa massa, laoreet ac neque vel, condimentum eleifend nunc. In luctus, metus nec consequat malesuada, odio nisi dapibus enim, rutrum aliquet ante quam vitae tortor.");
-const third_post = new Post(3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "https://source.unsplash.com/random/200x200?sig=3", "Etiam massa massa, laoreet ac neque vel, condimentum eleifend nunc. In luctus, metus nec consequat malesuada, odio nisi dapibus enim, rutrum aliquet ante quam vitae tortor.");
-const fourth_post = new Post(4,"Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "https://source.unsplash.com/random/200x200?sig=4", "Etiam massa massa, laoreet ac neque vel, condimentum eleifend nunc. In luctus, metus nec consequat malesuada, odio nisi dapibus enim, rutrum aliquet ante quam vitae tortor.");
+let posts: Post[];
+posts = [new Post(1,"Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "https://picsum.photos/id/42/3456/2304", "Etiam massa massa, laoreet ac neque vel, condimentum eleifend nunc. In luctus, metus nec consequat malesuada, odio nisi dapibus enim.")];
+posts.push(new Post(2,"Curabitur et nibh id arcu posuere fermentum.", "https://picsum.photos/id/41/1280/805", "Donec quam metus, lacinia sit amet elit eget, laoreet ultrices ante. Nulla ornare pulvinar magna, eu finibus ante iaculis a."));
+posts.push(new Post(3,"Morbi posuere lacus eu dolor dignissim sollicitudin.", "https://picsum.photos/id/29/4000/2670", "Curabitur sit amet dignissim dui. Morbi nec ultrices erat, ut pharetra risus. Quisque sed sem vehicula, maximus leo in, vehicula mi."));
+posts.push(new Post(4,"Phasellus malesuada mi at imperdiet consectetur.", "https://picsum.photos/id/18/2500/1667", "Aenean aliquet, ex ut mollis egestas, neque felis porttitor felis, at cursus risus enim eget dolor. In hac habitasse platea dictumst."));
 
-const first_comment = new ListOfComments(10, first_post.Id, "bibendum@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris.");
-const second_comment = new ListOfComments(20, first_post.Id, "maximus@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris.");
-const third_comment = new ListOfComments(30, first_post.Id, "consectetur@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris.");
-const fourth_comment = new ListOfComments(40, first_post.Id, "vulputate@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris.");
+let comments: Commentt[];
+comments = [new Commentt(10, posts[0].Id, "bibendum@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris.")];
+comments.push(new Commentt(20, posts[0].Id, "maximus@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris."));
+comments.push(new Commentt(30, posts[0].Id, "consectetur@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris."));
+comments.push(new Commentt(40, posts[0].Id, "vulputate@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris."));
+comments.push(new Commentt(50, posts[1].Id, "bibendum@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris."));
+comments.push(new Commentt(60, posts[1].Id, "maximus@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris."));
+comments.push(new Commentt(70, posts[1].Id, "consectetur@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris."));
+comments.push(new Commentt(80, posts[1].Id, "vulputate@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris."));
+comments.push(new Commentt(90, posts[2].Id, "bibendum@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris."));
+comments.push(new Commentt(100, posts[2].Id, "maximus@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris."));
+comments.push(new Commentt(110, posts[2].Id, "consectetur@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris."));
+comments.push(new Commentt(120, posts[2].Id, "vulputate@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris."));
+comments.push(new Commentt(130, posts[3].Id, "bibendum@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris."));
+comments.push(new Commentt(140, posts[3].Id, "maximus@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris."));
+comments.push(new Commentt(150, posts[3].Id, "consectetur@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris."));
+comments.push(new Commentt(160, posts[3].Id, "vulputate@email.com", "Fusce ipsum mi, molestie at ante nec, viverra egestas purus. In eu lectus at augue consectetur venenatis sit amet sed mauris."));
 
-document.getElementById("first-title")!.innerHTML = first_post.Title;
-document.getElementById("second-title")!.innerHTML = second_post.Title;
-document.getElementById("third-title")!.innerHTML = third_post.Title;
-document.getElementById("fourth-title")!.innerHTML = fourth_post.Title;
+let title;
 
-(document.getElementById("first-img")! as HTMLImageElement).src = first_post.ImageURL;
-(document.getElementById("second-img")! as HTMLImageElement).src = second_post.ImageURL;
-(document.getElementById("third-img")! as HTMLImageElement).src = third_post.ImageURL;
-(document.getElementById("fourth-img")! as HTMLImageElement).src = fourth_post.ImageURL;
+let aux: string;
+let contador: number;
+aux = "";
+contador = 0;
 
-document.getElementById("first-body")!.innerHTML = first_post.Body;
-document.getElementById("second-body")!.innerHTML = second_post.Body;
-document.getElementById("third-body")!.innerHTML = third_post.Body;
-document.getElementById("fourth-body")!.innerHTML = fourth_post.Body;
+for(var i = 0; i < 4; i++){
+    if(i == 0)
+        aux = "first-title";
+    else if(i == 1)
+        aux = "second-title";
+    else if(i == 2)
+        aux = "third-title";
+    else if(i == 3)
+        aux = "fourth-title";
+    
+    title = document.getElementById(aux);
 
+    if(title)
+        title.innerHTML = posts[i].Title;
+}
+
+
+let image;
+
+aux = "";
+contador = 0;
+
+for(var i = 0; i < 4; i++){
+    if(i == 0)
+        aux = "first-img";
+    else if(i == 1)
+        aux = "second-img";
+    else if(i == 2)
+        aux = "third-img";
+    else if(i == 3)
+        aux = "fourth-img";
+    
+    image = document.getElementById(aux) as HTMLImageElement;
+
+    if(image)
+        image.src = posts[i].ImageURL;
+}
+
+let body;
+
+aux = "";
+contador = 0;
+
+for(var i = 0; i < 4; i++){
+    if(i == 0)
+        aux = "first-body";
+    else if(i == 1)
+        aux = "second-body";
+    else if(i == 2)
+        aux = "third-body";
+    else if(i == 3)
+        aux = "fourth-body";
+    
+    body = document.getElementById(aux);
+
+    if(body)
+        body.innerHTML = posts[i].Body;
+}
+
+let email;
+
+aux = "";
+contador = 0;
+
+for(var i = 0; i < 4; i++){
+    for(var j = 1; j <= 4; j++){
+        if(i == 0)
+            aux = "first-email" + j;
+        else if(i == 1)
+            aux = "second-email" + j;
+        else if(i == 2)
+            aux = "third-email" + j;
+        else if(i == 3)
+            aux = "fourth-email" + j;
+        
+        email = document.getElementById(aux);
+
+        if(email)
+            email.innerHTML = comments[contador].Email;
+        
+        contador++;
+    }
+}
+
+let comment;
+
+aux = "";
+contador = 0;
+
+for(var i = 0; i < 4; i++){
+    for(var j = 1; j <= 4; j++){
+        if(i == 0)
+            aux = "first-ID" + j;
+        else if(i == 1)
+            aux = "second-ID" + j;
+        else if(i == 2)
+            aux = "third-ID" + j;
+        else if(i == 3)
+            aux = "fourth-ID" + j;
+        
+        comment = document.getElementById(aux);
+
+        if(comment)
+            comment.innerHTML = "Comment " + comments[contador].Id + " From Post " + comments[contador].PostId;
+        
+        contador++;
+    }
+}
 
 
