@@ -146,7 +146,7 @@ for (var i = 0; i < 4; i++) {
             aux = "fourth-ID" + j;
         comment = document.getElementById(aux);
         if (comment)
-            comment.innerHTML = "Comment " + comments[count].Id + " From Post " + comments[count].PostId;
+            comment.innerHTML = "Comment " + comments[count].Id + " from Post " + comments[count].PostId;
         count++;
     }
 }
