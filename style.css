@@ -14,7 +14,7 @@
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 45%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
@@ -33,6 +33,12 @@
   border-radius: 3px 0 0 3px;
 }
 
+/* Position the "prev button" to the left */
+.prev{
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
@@ -45,7 +51,7 @@
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  bottom: 25px;
   width: 100%;
   text-align: center;
 }
@@ -58,22 +64,6 @@
   padding: 8px 12px;
   position: absolute;
   top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
 }
 
 /* Fading animation */
@@ -99,7 +89,7 @@
   margin-right: auto;
   width: 1000px;
   height: 550px;
-  border: 1px solid
+  border: 1px solid;
 }
 
 .comment {
@@ -120,7 +110,17 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 10px;
+  font-size: 15px;
   margin: 4px 2px;
-  border-radius: 12px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.center{
+  margin: 0;
+  position: absolute;
+  top: 249%;
+  left: 51%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
